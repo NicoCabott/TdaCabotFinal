@@ -1,0 +1,359 @@
+@import "variables.scss";
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+
+
+/* propiedades del padre */
+.contenedor {
+    @include flex;
+}
+
+
+
+header {
+    grid-area: header;
+    text-align: center;
+    position: sticky;
+    top: 0;
+
+    nav {
+        background-color: nth($colores, 1);
+        padding: 1.5rem;
+
+        ul {
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+
+            li {
+                a {
+                    text-decoration: none;
+                    color: black;
+                    border-bottom: 1px solid black;
+                    padding: 0.5rem;
+
+                    &:hover {
+                        color: black;
+                        border-bottom: 2px solid black;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+
+
+
+
+main {
+    grid-area: main;
+    background-color: nth($colores, 1);
+
+    h1 {
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    h2 {
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    h3 {
+        text-align: center;
+        margin: 3rem;
+        text-decoration: underline;
+    }
+
+
+    h5 {
+        text-decoration: double;
+    }
+
+    p {
+        font-size: 110%;
+    }
+
+    .divHeader {
+        display: flex;
+        background-color: nth($colores, 2);
+        flex-direction: column;
+        text-align: center;
+
+        .logoHonguito {
+            width: 10%;
+            padding: 0.5rem;
+            text-align: center;
+            align-self: center;
+        }
+    }
+
+    .section1 {
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: 2rem;
+
+        .foto1 {
+            width: 40%;
+            border-radius: 5%;
+        }
+
+        .foto2 {
+            width: 40%;
+            border-radius: 5%;
+        }
+    }
+}
+
+/*ceramicas*/
+
+.contenedorProductos {
+    text-align: center;
+    margin-left: 18rem;
+    margin-right: 18rem;
+    padding: 1rem;
+
+    .foto3 {
+        width: 75%;
+        padding: 1rem;
+
+    }
+
+    .foto4 {
+        width: 75%;
+        padding: 1rem;
+    }
+
+    .foto8 {
+        width: 75%;
+        padding: 1rem;
+    }
+
+    .foto6 {
+        width: 50%;
+        padding: 1rem;
+    }
+    
+    .foto7 {
+        width: 50%;
+        padding: 1rem;
+    }
+
+    hr {
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+        border: 1px solid black;
+
+    }
+    
+    p{
+        text-align: center;
+        font-size: 200%;
+    }
+
+    h4 {
+        padding: 1rem;
+    }
+}
+
+
+
+
+
+/* sobre mi*/
+
+
+.contenedorSobreMi {
+    margin: 3rem;
+
+    .divSobreMi {
+        display: flex;
+    }
+
+    .pSobreMi {
+        display: flex;
+        flex-direction: column;
+        padding: 3rem;
+
+        p {
+            padding: 2rem;
+        }
+
+        img {
+            border-radius: 50px;
+        }
+
+        .foto9 {
+            width: 40%;
+            margin-right: 7rem;
+        }
+    }
+}
+
+
+
+/*contacto*/
+
+.divForm {
+    margin-left: 4rem;
+    margin-right: 4rem;
+    text-align: center;
+
+    p {
+        margin-left: 10rem;
+        margin-right: 10rem;
+    }
+
+    button {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+}
+
+form {
+    fieldset {
+        border: none;
+    }
+
+    div {
+        label {
+            padding: 2rem;
+        }
+    }
+}
+
+/*footer */
+
+footer {
+    grid-area: footer;
+    background-color: nth($colores, 2);
+    text-align: center;
+    padding: 0.7rem;
+
+    .divFooter {
+        display: flex;
+        justify-content: space-evenly;
+        margin: 1rem;
+        padding: 0;
+
+        .twitterIcon {
+            width: 15%;
+            padding: 0;
+        }
+
+        .facebookIcon {
+            width: 15%;
+            padding: 0;
+        }
+
+        .instagramIcon {
+            width: 15%;
+            padding: 0;
+        }
+    }
+}
+
+
+
+
+/* mediaquery tablet */
+
+@media only screen and (max-width:600px) {
+    .contenedor {
+        @include flex;
+    }
+
+    .logoHonguito {
+        width: 40%;
+        padding: 0.5rem;
+    }
+
+    .section1 {
+        display: block;
+
+        .foto1 {
+            width: 100%;
+            padding: 1rem;
+        }
+
+        .foto2 {
+            width: 100%;
+            padding: 1rem;
+        }
+
+        h3 {
+            margin: 1rem;
+        }
+    }
+
+    /*ceramicas*/
+    .contenedorProductos {
+        text-align: center;
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+
+    /* sobre mi */
+
+    .divSobreMi {
+        display: block;
+        text-align: center;
+
+        .foto9 {
+            text-align: center;
+            margin: 0;
+            width: 60%;
+        }
+
+        .pSobreMi {
+            padding: 1rem;
+            margin: 1rem;
+        }
+    }
+
+
+    @media only screen and (max-width:360px) {
+
+        .contenedor {
+        @include flex;
+        }
+
+        .logoHonguito {
+            width: 40%;
+            padding: 0rem;
+        }
+
+        nav {
+            font-size: 6 0%;
+        }
+
+        .divFooter {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        /* sobre mi */
+
+        .mainSobreMi {
+            margin: 0;
+        }
+    }
+}
+
+
