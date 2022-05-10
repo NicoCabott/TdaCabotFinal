@@ -69,11 +69,12 @@ main {
     justify-content: space-evenly;
     margin-bottom: 2rem; }
     main .section1 .foto1 {
-      width: 40%;
-      border-radius: 5%; }
+      width: 40%; }
     main .section1 .foto2 {
-      width: 40%;
-      border-radius: 5%; }
+      width: 40%; }
+
+img {
+  border-radius: 5%; }
 
 /*ceramicas*/
 .contenedorProductos {
@@ -82,18 +83,30 @@ main {
   margin-right: 18rem;
   padding: 1rem; }
   .contenedorProductos .foto3 {
-    width: 75%;
+    width: 50%;
     padding: 1rem; }
   .contenedorProductos .foto4 {
-    width: 75%;
+    width: 50%;
     padding: 1rem; }
   .contenedorProductos .foto8 {
-    width: 75%;
+    width: 50%;
     padding: 1rem; }
   .contenedorProductos .foto6 {
     width: 50%;
     padding: 1rem; }
   .contenedorProductos .foto7 {
+    width: 50%;
+    padding: 1rem; }
+  .contenedorProductos .foto10 {
+    width: 50%;
+    padding: 1rem; }
+  .contenedorProductos .foto11 {
+    width: 50%;
+    padding: 1rem; }
+  .contenedorProductos .foto12 {
+    width: 50%;
+    padding: 1rem; }
+  .contenedorProductos .foto13 {
     width: 50%;
     padding: 1rem; }
   .contenedorProductos hr {
@@ -110,18 +123,24 @@ main {
 .contenedorSobreMi {
   margin: 3rem; }
   .contenedorSobreMi .divSobreMi {
-    display: flex; }
+    display: flex;
+    flex-direction: column; }
   .contenedorSobreMi .pSobreMi {
     display: flex;
     flex-direction: column;
-    padding: 3rem; }
+    padding-top: 1.5rem;
+    padding-left: 7rem;
+    padding-right: 7rem; }
     .contenedorSobreMi .pSobreMi p {
-      padding: 2rem; }
+      padding: 2rem;
+      text-align: center;
+      font-size: large; }
     .contenedorSobreMi .pSobreMi img {
       border-radius: 50px; }
-    .contenedorSobreMi .pSobreMi .foto9 {
-      width: 40%;
-      margin-right: 7rem; }
+  .contenedorSobreMi .foto9 {
+    width: 40%;
+    margin-right: 7rem;
+    align-self: center; }
 
 /*contacto*/
 .divForm {
@@ -171,6 +190,12 @@ footer {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
     grid-template-areas: "header header" "main main" "footer footer"; }
+  header {
+    margin: 0;
+    padding: 0; }
+    header nav {
+      margin: 0;
+      padding: 0; }
   .logoHonguito {
     width: 40%;
     padding: 0.5rem; }
@@ -201,7 +226,7 @@ footer {
       padding: 1rem;
       margin: 1rem; } }
 
-@media only screen and (max-width: 600px) and (max-width: 360px) {
+@media only screen and (max-width: 360px) {
   .contenedor {
     padding: 0;
     height: 100vh;
@@ -209,14 +234,22 @@ footer {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
     grid-template-areas: "header header" "main main" "footer footer"; }
+  header {
+    margin: 0;
+    padding: 0; }
+    header nav {
+      margin: 0;
+      padding: 0;
+      font-size: 60%; }
   .logoHonguito {
     width: 40%;
     padding: 0rem; }
-  nav {
-    font-size: 6 0%; }
   .divFooter {
     display: flex;
     justify-content: space-around; }
   /* sobre mi */
-  .mainSobreMi {
-    margin: 0; } }
+  .divSobreMi {
+    display: flex;
+    flex-direction: column; }
+    .divSobreMi .foto9 {
+      align-self: center; } }
